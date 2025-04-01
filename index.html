@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-a-Mole</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+</head>
+<body class="font-[ranchers]">
+    <header class="text-bold text-6xl bg-green-500 text-center h-100 py-6">
+        <h1>
+            Whack-a-Mole
+        </h1>
+    </header>
+    <main class="mx-auto my-10">
+        <button id="start-btn" class="text-2xl tracking-wide bg-gray-400 ml-10 px-6 py-4 rounded-xl">start</button>
+        <section class="game-board mt-2 flex justify-around">
+            <div id="hole-1" class="hole hole-1">mole hole
+                <img class="mole w-20 hidden" src="images/mole.png"></img>
+            </div>
+            <div id="hole-2" class="hole hole-2">mole hole
+                <img class="mole w-20 hidden" src="images/mole.png"></img>
+
+            </div>
+            <div id="hole-3" class="hole hole-3">mole hole
+                <img class="mole w-20 hidden" src="images/mole.png"></img>
+
+            </div>
+        </section>
+
+    </main>
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
+</html>
