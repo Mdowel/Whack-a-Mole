@@ -21,24 +21,41 @@
     <main class="mx-auto">
         <section id="top" class="flex justify-between px-10 py-4 items-center bg-green-400">
             <button id="start-btn" class="text-2xl tracking-wide bg-gray-400  px-6 py-4 rounded-xl hover:bg-slate-300 hover:drop-shadow">start</button>
-            <div id="score">0</div>
-            <div id="timer" class="mr-10">1:00</div>
+            <div id="score" class="text-lg">0</div>
+            <div id="timer" class="mr-10 text-lg">1:00</div>
         </section>
         
-        <section class="game-board mt-10 flex justify-around">
-            <div id="hole-1" class="hole hole-1">mole hole
-                <img class="mole w-20 hidden" src="images/mole.png"></img>
+        <section class="game-board w-2/3 max-w-xl mt-12 mx-auto flex flex-row flex-wrap gap-8 text-center justify-around">
+            <div id="hole-1" class="hole hole-1 w-24 h-24 ">
+                <img class="hole-img w-full" src="images/hole.png" alt="mole hole">
+                <img class="mole w-full hidden" src="images/mole.png" alt="mole"></img>
             </div>
-            <div id="hole-2" class="hole hole-2">mole hole
-                <img class="mole w-20 hidden" src="images/mole.png"></img>
-
+            <div id="hole-2" class="hole hole-2 w-24 h-24 ">
+                <img class="hole-img w-full" src="images/hole.png" alt="mole hole">
+                <img class="mole w-full hidden" src="images/mole.png" alt="mole"></img>
             </div>
-            <div id="hole-3" class="hole hole-3">mole hole
-                <img class="mole w-20 hidden" src="images/mole.png"></img>
-
+            <div id="hole-3" class="hole hole-3 w-24 h-24 ">
+                <img class="hole-img w-full" src="images/hole.png" alt="mole hole">
+                <img class="mole w-full hidden" src="images/mole.png" alt="mole"></img>
+            </div>
+            <div id="hole-4" class="hole hole-4 w-24 h-24 ">
+                <img class="hole-img w-full" src="images/hole.png" alt="mole hole">
+                <img class="mole w-full hidden" src="images/mole.png" alt="mole"></img>
+            </div>
+            <div id="hole-5" class="hole hole-5 w-24 h-24 ">
+                <img class="hole-img w-full" src="images/hole.png" alt="mole hole">
+                <img class="mole w-full hidden" src="images/mole.png" alt="mole"></img>
+            </div>
+            <div id="hole-6" class="hole hole-6 w-24 h-24 ">
+                <img class="hole-img w-full" src="images/hole.png" alt="mole hole">
+                <img class="mole w-full hidden" src="images/mole.png" alt="mole"></img>
+            </div>
+            <div id="hole-7" class="hole hole-7 w-24 h-24 ">
+                <img class="hole-img w-full" src="images/hole.png" alt="mole hole">
+                <img class="mole w-full hidden" src="images/mole.png" alt="mole"></img>
             </div>
 
-            <div id="game-over-popup" class="fixed bg-pink-600 h-1/2 w-1/3 rounded-xl border-8 border-pink-400 text-center hidden">
+            <div id="game-over-popup" class="fixed bg-pink-600 h-1/2 w-1/3 min-w-80 rounded-xl border-8 border-pink-400 text-center hidden">
                 <h2 class="text-5xl my-16">Game Over!</h2>
                 <p class="text-3xl">Your Score: <span id="final-score"></span></p>
                 <button id="restart-btn" class="bg-gray-300 rounded-xl px-6 py-2 mt-12 hover:bg-gray-200">Play Again?</button>

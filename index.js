@@ -25,7 +25,7 @@ function getRandomTime(min, max) {
 // }
 
 function runTimer() {
-    let seconds = 5 
+    let seconds = 59 
     let timer = setInterval(() => {
         if (seconds > 9) {
             timerEl.innerText = `00:${seconds}`
@@ -72,12 +72,15 @@ startBtn.addEventListener('click', () => {
 function molePeek() {
     const time = getRandomTime(500, 1000)
     const currentMole = document.querySelector(`#hole-${index} .mole`)
+    const currentHole = document.querySelector(`#hole-${index} .hole-img`)
     // mole up
     currentMole.classList.remove('hidden')
+    currentHole.classList.add('hidden')
     
     // mole down & repeat
     setTimeout(() => {
         currentMole.classList.add('hidden')
+        currentHole.classList.remove('hidden')
         if (!timesUp) {
             getRandomIndex()
             molePeek(index)
