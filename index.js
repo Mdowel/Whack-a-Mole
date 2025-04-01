@@ -2,6 +2,9 @@ const startBtn = document.getElementById('start-btn')
 const moleHoles = document.querySelectorAll('.hole')
 const timerEl = document.getElementById('timer')
 const scoreEl = document.getElementById('score')
+const gameOverPopUp = document.getElementById('game-over-popup')
+const finalScoreEl = document.getElementById('final-score')
+const restartBtn = document.getElementById('restart-btn')
 let timesUp = false
 let score = 0
 
@@ -22,7 +25,7 @@ function getRandomTime(min, max) {
 // }
 
 function runTimer() {
-    let seconds = 59 
+    let seconds = 5 
     let timer = setInterval(() => {
         if (seconds > 9) {
             timerEl.innerText = `00:${seconds}`
@@ -36,6 +39,8 @@ function runTimer() {
             clearInterval(timer)
             timesUp = true
             console.log('game over')
+            gameOverPopUp.classList.remove('hidden')
+            finalScoreEl.innerText = score
         } else {
             seconds--
         }
@@ -47,11 +52,11 @@ function runTimer() {
 moleHoles.forEach(hole => {
     hole.addEventListener('click', () => {
         // console.log(hole.id)
-    if( hole.id === `hole-${index}` ){
-        score++
-        scoreEl.innerText = score
-        console.log('whack!', hole.id)
-    }
+        if( hole.id === `hole-${index}` ){
+            score++
+            scoreEl.innerText = score
+            console.log('whack!', hole.id)
+        }
     })
 })
 
@@ -80,6 +85,11 @@ function molePeek() {
     }, time);
 }
 
-function whack() {
-
-}
+restartBtn.addEventListener('click', () => {
+    gameOverPopUp.classList.add('hidden')
+    startBtn.disabled = false
+    score = 0
+    timesUp = false
+    scoreEl.innerText = score
+    timerEl.innerText = '1:00'
+})
