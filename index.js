@@ -70,7 +70,7 @@ startBtn.addEventListener('click', () => {
 })
 
 function molePeek() {
-    const time = getRandomTime(500, 1000)
+    const time = getRandomTime(400, 900)
     const currentMole = document.querySelector(`#hole-${index} .mole`)
     const currentHole = document.querySelector(`#hole-${index} .hole-img`)
     // mole up
