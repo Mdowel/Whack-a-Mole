@@ -9,7 +9,7 @@ let timesUp = false
 let score = 0
 
 function getRandomIndex() {
-    index = Math.floor(Math.random() * 3) + 1
+    index = Math.floor(Math.random() * moleHoles.length) + 1
     // console.log('random index:', index)
     return index
 }
